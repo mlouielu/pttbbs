@@ -155,7 +155,7 @@
 #define RS_RECOMMEND	0x200	/* search by recommends */
 #define RS_MONEY	0x400	/* search by money */
 #define RS_SOLVED	0x800	/* search by 's' mark */
-#define RS_REPLY_COUNT 0xF00  /* search by reply count */
+#define RS_REPLY_COUNT 0x1000  /* search by reply count */
 
 
 #define CURSOR_FIRST    (RS_TITLE | RS_FIRST)
