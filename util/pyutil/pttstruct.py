@@ -165,7 +165,7 @@ FILEHEADER_FMT = (
         ("owner", "%ds" % (IDLEN + 2)),
         ("date", "6s"),
         ("title", "%ds" % (TTLEN + 1)),
-        ("pad2", "B"),
+        ("reply_count", "B"),
         ("multi", "i"),
         ("filemode", "B"),
         ("pad3", "3s"))

@@ -2734,6 +2734,7 @@ do_add_recommend(const char *direct, fileheader_t *fhdr,
     else if(type == RECTYPE_BAD && fhdr->recommend > -MAX_RECOMMENDS)
           update = -1;
     fhdr->recommend += update;
+    fhdr->reply_count += 1;
 
     // since we want to do 'modification'...
     fhdr->modified = dasht(path);
