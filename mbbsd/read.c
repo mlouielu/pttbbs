@@ -636,8 +636,8 @@ ask_filter_predicate(filter_predicate_t *pred, int prev_modes, int sr_mode,
             !getdata(b_lines, 0, (currmode & MODE_SELECT) ?
                      "Add Rule Reply: " : "Search Reply Higher then: ",
                      keyword, 7, LCECHO) ||
-            (pred->reply_count = atoi(keyword)) == 0);
-        return READ_REDRAW;
+            (pred->reply_count = atoi(keyword)) == 0)
+            return READ_REDRAW;
     } else {
 	// Ptt: only once for these modes.
 	if (prev_modes & sr_mode &
