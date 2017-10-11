@@ -830,6 +830,7 @@ select_read(const keeploc_t * locmem, int sr_mode)
    int ui_ret = ask_filter_predicate(&predicate, _mode, sr_mode, fh, &success);
    if (!success)
        return ui_ret;
+   vmsgf("pred->reply_count: %d", predicate->reply_count);
    _mode |= sr_mode;
 
    snprintf(genbuf, sizeof(genbuf), "%s%X.%X.%X",
