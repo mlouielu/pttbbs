@@ -265,7 +265,7 @@ typedef struct fileheader_t { /* 128 bytes */
     char    date[6];                 /* [02/02] or space(5) */
     char    title[TTLEN + 1];
     /* TODO this multi is a mess now. */
-    char    pad2;
+    char    reply_count;
     union {
 	/* TODO: MOVE money to outside multi!!!!!! */
 	int money;
