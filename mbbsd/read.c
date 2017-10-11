@@ -632,7 +632,11 @@ ask_filter_predicate(filter_predicate_t *pred, int prev_modes, int sr_mode,
 	    return READ_REDRAW;
 	strcat(keyword, "M");
     } else if (sr_mode & RS_REPLY_COUNT) {
-        pred->reply_count = atoi(keyword);
+        if (currstat == RMAIL ||
+            !getdata(b_lines, 0, (currmode & MODE_SELECT) ?
+                     "Add Rule Reply: " : "Search Reply Higher then: ",
+                     keyword, 7, LCECHO) ||
+            (pred->reply_count = atoi(keyword)) == 0);
         return READ_REDRAW;
     } else {
 	// Ptt: only once for these modes.
