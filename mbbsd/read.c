@@ -681,7 +681,7 @@ match_filter_predicate(const fileheader_t *fh, void *arg)
     else if (sr_mode & RS_MONEY)
 	return query_file_money(fh) >= pred->money;
     else if (sr_mode & RS_REPLY_COUNT) {
-        vmsg("pred: %d, fh: %d\n", pred->reply_count, fh->reply_count);
+        vmsgf("pred: %d, fh: %d\n", pred->reply_count, fh->reply_count);
         return fh->reply_count >= pred->reply_count;
     }
     return 0;
