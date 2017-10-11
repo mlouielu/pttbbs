@@ -151,6 +151,8 @@ modify_dir_lite(
 	fhdr.recommend = recommend;
     }
 
+    // Update reply count
+    fhdr.reply_count += 1;
 
     // PttLock(fd, sz, sizeof(fhdr), F_WRLCK);
     if (lseek(fd, sz, SEEK_SET) >= 0)
